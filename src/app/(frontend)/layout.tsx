@@ -6,10 +6,24 @@ import React from 'react'
 
 const navItems = [
 	{ href: '/', label: 'Home' },
-	...generateRandomCategorySlugs().map((slug) => ({
+	{ href: '/all-categories', label: 'All Categories' },
+	...generateRandomCategorySlugs().slice(0, 100).map((slug) => ({
 		href: `/category/${slug}`,
 		label: `Category ${slug}`,
 	})),
+	...generateRandomCategorySlugs().slice(80000, 80100).map((slug) => ({
+		href: `/category/${slug}`,
+		label: `Category ${slug}`,
+	})),
+	...generateRandomCategorySlugs().slice(0, 100).map((slug) => ({
+		href: `/tag/${slug}`,
+		label: `Tag ${slug}`,
+	})),
+	...generateRandomCategorySlugs().slice(80000, 80100).map((slug) => ({
+		href: `/tag/${slug}`,
+		label: `Tag ${slug}`,
+	})),
+	{ href: '/all-tags', label: 'All Tags' },
 	{ href: '/category/other', label: 'Category withouth generateStaticParams' },
 ]
 

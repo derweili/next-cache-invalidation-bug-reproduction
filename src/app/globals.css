@@ -162,3 +162,10 @@ pre {
   color: white;
   padding: 20px;
 }
+
+main ul a {
+  &:hover {
+    color: #16abff;
+    text-decoration: underline;
+  }
+}
